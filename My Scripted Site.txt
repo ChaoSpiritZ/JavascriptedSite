@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>MyScriptedSite</title>
+<style>
+
+* {
+  margin: 0;
+}
+
+.editor, .preview {
+  border: 2px solid red;
+  float: left;
+  width: calc(50% - 8px);
+  height: 750px;
+  margin: 2px;
+}
+
+h1, h2, p {
+  text-align: center;
+  margin: 10px;
+}
+
+h1 {
+  text-decoration: underline;
+}
+
+img {
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.editor span {
+  display: block;
+  text-align: center;
+  margin: 10px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="editor">
+
+<h1>Editor</h1>
+<h2>Text</h2>
+<span>
+Title: 
+<input type="text" id="h1edit"/>
+<button type="button" onclick="changetitle();">Set</button>
+</span>
+
+<span>
+Sub Title: 
+<input type="text" id="h2edit" />
+<button type="button" onclick="changesubtitle();">Set</button>
+</span>
+
+<span>
+Article: 
+<textarea id="pedit"></textarea>
+<button type="button" onclick="changearticle();">Set</button>
+</span>
+<h2>Color</h2>
+
+<span>
+Title: 
+<select id="titleclr">
+<option>-- select a color --</option>
+<option value="red">REEEEEED</option>
+<option value="green">Green.</option>
+<option value="blue">Blue please (._.)</option>
+<option value="purple">I want purple</option>
+</select>
+<button type="button" onclick="titleclr();">Set</button>
+</span>
+
+<span>
+SubTitle: 
+<select id="subtitleclr">
+<option>-- select a color --</option>
+<option value="red">REEEEEED</option>
+<option value="green">Green.</option>
+<option value="blue">Blue please (._.)</option>
+<option value="purple">I want purple</option>
+</select>
+<button type="button" onclick="subtitleclr();">Set</button>
+</span>
+
+<span>
+Article: 
+<select id="articleclr">
+<option>-- select a color --</option>
+<option value="red">REEEEEED</option>
+<option value="green">Green.</option>
+<option value="blue">Blue please (._.)</option>
+<option value="purple">I want purple</option>
+</select>
+<button type="button" onclick="articleclr();">Set</button>
+</span>
+<h2>Font Size</h2>
+
+<span>
+Title: 
+<select id="titlesizer">
+<option>-- select a font size --</option>
+<option value="8px">8</option>
+<option value="9px">9</option>
+<option value="10px">10</option>
+<option value="11px">11</option>
+<option value="12px">12</option>
+<option value="14px">14</option>
+<option value="16px">16</option>
+<option value="20px">20</option>
+<option value="24px">24</option>
+<option value="30px">30</option>
+</select>
+<button type="button" onclick="titlesize();">Set</button>
+</span>
+
+<span>
+SubTitle: 
+<select id="subtitlesizer">
+<option>-- select a font size --</option>
+<option value="8px">8</option>
+<option value="9px">9</option>
+<option value="10px">10</option>
+<option value="11px">11</option>
+<option value="12px">12</option>
+<option value="14px">14</option>
+<option value="16px">16</option>
+<option value="20px">20</option>
+<option value="24px">24</option>
+<option value="30px">30</option>
+</select>
+<button type="button" onclick="subtitlesize();">Set</button>
+</span>
+
+<span>
+Article: 
+<select id="articlesizer">
+<option>-- select a font size --</option>
+<option value="8px">8</option>
+<option value="9px">9</option>
+<option value="10px">10</option>
+<option value="11px">11</option>
+<option value="12px">12</option>
+<option value="14px">14</option>
+<option value="16px">16</option>
+<option value="20px">20</option>
+<option value="24px">24</option>
+<option value="30px">30</option>
+</select>
+<button type="button" onclick="articlesize();">Set</button>
+</span>
+
+</div>
+<div class="preview">
+
+<h1 id="h1">Javascript</h1>
+<br />
+<h2 id="h2">The Preview Area</h2>
+<p id="p">
+javascript is a javascript that javascripts scripts of java while the scripted java scripts its scripts. javascripts scripted at script script java, while scripting scripts.
+</p>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6zqsqgd7VPldEtjpcbxLMAGyESSOvwzU8BefiEj-cgclARk-d" />
+
+</div>
+
+ <script>
+
+function changetitle() {
+var h1changer = document.getElementById("h1edit");
+var h1 = document.getElementById("h1");
+
+h1.innerText = h1changer.value;
+}
+
+function changesubtitle() {
+var h1changer = document.getElementById("h2edit");
+var h2 = document.getElementById("h2");
+
+h2.innerText = h1changer.value;
+}
+
+function changearticle() {
+var h1changer = document.getElementById("pedit");
+var p = document.getElementById("p");
+
+p.innerText = h1changer.value;
+}
+
+function titleclr() {
+var h1 = document.getElementById("h1");
+var h1color = document.getElementById("titleclr");
+
+h1.style.color = h1color.value;
+}
+
+function subtitleclr() {
+var h2 = document.getElementById("h2");
+var h2color = document.getElementById("subtitleclr");
+
+h2.style.color = h2color.value;
+}
+
+function articleclr() {
+var p = document.getElementById("p");
+var pcolor = document.getElementById("articleclr");
+
+p.style.color = pcolor.value;
+}
+
+function titlesize() {
+var h1 = document.getElementById("h1");
+var h1size = document.getElementById("titlesizer");
+h1.style.fontSize = h1size.value;
+}
+
+function subtitlesize() {
+var h2 = document.getElementById("h2");
+var h2size = document.getElementById("subtitlesizer");
+h2.style.fontSize = h2size.value;
+}
+
+function articlesize() {
+var p = document.getElementById("p");
+var psize = document.getElementById("articlesizer");
+p.style.fontSize = psize.value;
+}
+
+
+</script>
+
+</body>
+</html>
